@@ -1,0 +1,10 @@
+<div class="list-group-item list-group-item-action flex-column align-items-start" [ngClass]="{'list-group-item-success':post.loveIts>0, 'list-group-item-danger': post.loveIts<0}">
+  <div class="d-flex w-100 justify-content-between">
+    <h2 class="mb-1">{{post.title}}</h2>
+    <a class="text-muted">{{post.created_ad | date:"short"}}</a>
+  </div>
+  <p class="mb-1">{{post.content}}</p>
+
+  <button class="btn btn-success" id="love" (click)="addPost()">Love !!</button>
+  <button class="btn btn-danger" id="dont" (click)="suppPost()">Don't Love !!</button>
+</div>
